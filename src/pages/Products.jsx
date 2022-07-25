@@ -1,44 +1,67 @@
-import React from 'react'
-import {products} from "../data/dummy"
+import React from "react";
+import { products } from "../data/dummy";
 
 function Products() {
   return (
-    <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap -m-4">
-     {products.map((product)=>(
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full" key={product.productID}>
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src={product.productImage}/>
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{product.category}</h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">{product.productName}</h2>
-            <p class="mt-1">${product.price}</p>
-          </div>
-        </div>
-       
-     ))}
-       
-      
-        
-        
-       
-        {/* <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/427x267"/>
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
-            <p class="mt-1">$12.00</p>
-          </div>
-        </div> */}
-       
+    <div className="align-center mt-5  ">
+      <div className="overflow-x-auto relative shadow-md sm:rounded-lg mx-20 ">
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase  bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="py-3 px-6">
+                Product ID
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Product Image
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Product Name
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Category
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Price
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Quantity
+              </th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((product, i) => (
+              <tr
+                key={product.productID}
+                className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+              >
+                <th
+                  scope="row"
+                  className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  {product.productID}
+                </th>
+                <td className="py-4 px-6">
+                  <div>
+                    <img
+                      className="rounded-xl h-20 md:ml-3"
+                      src={product.productImage}
+                      alt="order-item"
+                    />
+                  </div>
+                </td>
+                <td className="py-4 px-6">{product.productName}</td>
+                <td className="py-4 px-6">{product.category}</td>
+                <td className="py-4 px-6">{product.price}</td>
+              
+                <td className="py-4 px-6">{product.quantity}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
-  </section>
-  )
+  );
 }
 
-export default Products
+export default Products;
