@@ -67,7 +67,7 @@ export const ordersData = [
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
   },
   {
-    OrderID: 874534,
+    OrderID: 874536,
     CustomerName: "Danai",
     TotalAmount: 122.99,
     OrderItems: "Watch",

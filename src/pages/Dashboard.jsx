@@ -1,8 +1,12 @@
 import React from 'react'
+import LineChart from '../components/Charts/LineChart'
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <div>
+      <LineChart/>
+      Da
+    </div>
   )
 }
 
