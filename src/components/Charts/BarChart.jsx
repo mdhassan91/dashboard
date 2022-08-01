@@ -53,10 +53,10 @@ const barChartData = {
 };
 function BarChart() {
   return (
-    <div>
-      <Bar options={options} data={barChartData} />;
-    </div>
-  );
+    
+      <Bar options={options} data={barChartData} />
+  
+  )
 }
 
 export default BarChart;

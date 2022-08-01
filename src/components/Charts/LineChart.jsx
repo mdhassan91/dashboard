@@ -63,7 +63,12 @@ const linChartData = {
 };
 
 function LineChart() {
-  return <Line options={options} data={linChartData} />;
+  return(
+    <div  >
+    <Line options={options} data={linChartData} />
+  </div>
+  )
+ 
 }
 
 export default LineChart;
